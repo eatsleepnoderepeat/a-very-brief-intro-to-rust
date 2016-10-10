@@ -281,16 +281,20 @@ a Type inside, e.g. `Option<u32>`.
 
 For example, if a parameter is optional you'd write:
 
+
 ```rust
-fn greeting(name: Option<&str>) -> &str {
+fn greeting(name: Option<&str>) -> String {
   let who = match name {
     Some(n) => n,
     None => "World",
-  }
+  };
+
   format!("Hello, {}!", who)
 }
+
 greeting(Some("ashley"));
 /// "Hello, ashley!"
+
 greeting(None);
 /// "Hello, World!"
 ```
