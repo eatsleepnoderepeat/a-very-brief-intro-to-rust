@@ -235,9 +235,9 @@ class: middle, left
 ## function signatures
 
 ```rust
-pub fn say_hello(name: &str) -> &str {
-  let message = format!("hello, {}!", name);
-  message
+pub fn say_hello(name: &str) -> String {
+let message = format!("hello, {}!", name);
+message
 }
 ```
 
